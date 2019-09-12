@@ -1,17 +1,77 @@
 <!DOCTYPE html>
-<html lang="zh-Hant-TW">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
+    <link
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
-    <title>JingHuang-Su website</title>
+    <title>Jing &mdash; Web Developer</title>
   </head>
   <body class="container">
-    <section class="nav">nav</section>
-    <section class="about">about</section>
-    <section class="project">project</section>
-    <section class="contact">contact me</section>
+    <section class="nav">
+      <div class="nav__mylogo">
+        <img src="./my_logo_001.png" alt="mylogo" />
+      </div>
+      <nav class="nav__nav">
+        <ul>
+          <li><a href="#aboutme">About Me</a></li>
+          <li><a href="#myproject">Project</a></li>
+          <li><a href="#contactme">Contact Me</a></li>
+        </ul>
+      </nav>
+    </section>
+    <section class="about" id="aboutme">
+      <div class="about__top">
+        <img src="./photo.jpg" alt="photo" />
+        <!-- TODO:put your resume -->
+        <div class="about__left--resume"></div>
+      </div>
+      <div class="about__down">
+        <h1 class="about__title">Hello, My name is JingHuang-Su</h1>
+        <h3 class="about__subtitle">A self-taught developer</h3>
+        <p>
+          First of all, I not major in Computer Science, I received my <strong>BA of
+          Finance degree</strong> from
+          <a href="http://www.ntpu.edu.tw/chinese/">National Taipei University</a>, so why I want to learn programming
+          and pursue a front-end developer as my career? 
+          
+          <p>During my time at
+          university, I took a statistics course when I was a sophomore. this
+          course have lots of homework that need to using R language to do with.
+          however, I have no programming experience before, so I need to spend
+          more time and effort to compelete every homework, because of this
+          experience, <strong>I learned problem-solving skill</strong>.</p>
+        </p>
+        <p>
+          After that, I started my journey in the programming world, but only
+          watch some online tutorials, I don't get my hand dirty with
+          programming in that time, until I found some good resourses on the
+          internet, such as <a href="https://cs61a.org/fa18">CS61A</a>, <a href="https://sp19.datastructur.es/">CS61B</a>, <a href="https://www.udemy.com/course/nodejs-the-complete-guide/">NodeJS</a>,
+          <a href="https://www.udemy.com/react-redux">Modern React with Redux</a>, <a href="https://www.udemy.com/mern-stack-front-to-back/">MERN Stack Front To Back</a>,
+          <a href="https://www.udemy.com/advanced-css-and-sass/">Advanced CSS and Sass</a>, <a href="https://www.udemy.com/advanced-javascript-concepts/">Advanced JavaScript Concept</a> and
+          so on<sup>*</sup>.
+        </p>
+
+        <p>
+          <strong>Because we know that the best way to learn is learning by doing </strong> , I did
+          almost all of labs and assignments from CS61A and CS61B, I also did
+          some of personal projects with the knowledge I have gained from Udemy
+          courses. you could check them on my <a href="https://github.com/JingHuang-Su">Github account</a>.
+        </p>
+
+        <p>
+          This just beginning in my programming journey, I still need to
+          compelete other fundamentals knowledge of computer science, such as
+          <a>Operating System</a>, <a>Computer Architecture</a>,
+          <a>Database Theory</a> and <a>renew my front-end knowledge</a>
+        </p>
+      </div>
+    </section>
+    <section class="project" id="myproject">project</section>
+    <section class="contact" id="contactme">contact me</section>
   </body>
 </html>
