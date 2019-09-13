@@ -11,6 +11,12 @@ html {
   font-size: 62.5%;
 }
 
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
 body {
   font-family: 'Nunito', sans-serif;
   background-color: #f1f1f1;
@@ -24,6 +30,12 @@ body {
     [content-end] minmax(6rem, 1fr)
     [full-end];
   grid-row-gap: 4rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .container {
+    grid-row-gap: 2rem;
+  }
 }
 
 /* nav */
@@ -64,6 +76,13 @@ nav ul li {
   color: rgba(0, 0, 0, 0.6);
 }
 
+@media only screen and (max-width: 56.25em) {
+  nav ul li {
+    font-size: 1.8rem;
+    padding-right: 1rem;
+  }
+}
+
 nav ul li a {
   text-decoration: none;
   outline: none;
@@ -88,11 +107,15 @@ nav ul li a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   color: rgba(0, 0, 0, 0.7);
 }
 
-.about__top {
+@media only screen and (max-width: 56.25em) {
+  .about {
+    font-size: 2rem;
+    grid-area: 2 / full-start/3/full-end;
+    padding: 2rem;
+  }
 }
 
 .about__top img {
@@ -138,9 +161,171 @@ nav ul li a:hover {
 }
 /* project */
 .project {
-  grid-area: 3 / content-start/4/content-end;
+  grid-area: 3 / full-start/4/full-end;
+  margin: 3rem;
 }
+
+.mt-sm {
+  margin: 3rem;
+}
+
+.project__weather,
+.project__career,
+.project__personalpage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .project__weather,
+  .project__career,
+  .project__personalpage {
+    flex-direction: column;
+  }
+}
+
+.project__weather--div,
+.project__personalpage--div {
+  flex: 0 0 50%;
+  padding: 4rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+.project__weather--div h2,
+.project__career--div h2,
+.project__personalpage--div h2 {
+  font-size: 2.6rem;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.project__weather--div ul li,
+.project__personalpage--div ul li,
+.project__career--div ul li {
+  font-size: 1.7rem;
+  margin-top: 1.2rem;
+  /* color: rgba(0, 0, 0, 0.7); */
+}
+
+@media only screen and (max-width: 56.25em) {
+  .project__weather--div ul li,
+  .project__personalpage--div ul li,
+  .project__career--div ul li {
+    font-size: 2rem;
+  }
+}
+
+.div--list {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.div--list li {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #ffffff;
+  display: inline-block;
+  background: rgba(7, 32, 255, 0.6);
+  border: 1px solid rgba(7, 32, 255, 0.2);
+  border-radius: 10px;
+  padding: 6px;
+}
+
+.project__weather--img,
+.project__personalpage--img,
+.project__career--img {
+  flex: 0 0 50%;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .project__career--fig {
+    order: -1;
+  }
+}
+
+.project__career--div {
+  padding: 1rem;
+  flex: 0 0 50%;
+  font-family: 'Nunito', sans-serif;
+}
+
+.project img {
+  width: 40rem;
+  height: 20rem;
+  border: 1px solid rgba(6, 152, 250, 0.3);
+  overflow: hidden;
+
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.6);
+}
+
+.project__fig:hover img {
+  filter: blur(3px) brightness(80%);
+}
+
+.project__fig {
+  position: relative;
+  overflow: hidden;
+  /* display: block; */
+}
+
+.project__caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  text-align: center;
+  opacity: 0;
+  transition: all 0.5s;
+  backface-visibility: hidden;
+  padding: 10rem;
+}
+
+.project__caption a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 700;
+}
+.project__caption:hover {
+  font-size: 2rem;
+  opacity: 1;
+  transform: translate(-50%, -50%) translateY(10px);
+}
+
 /* contact */
 .contact {
   grid-area: 4 / full-start/5/full-end;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact__svg {
+  display: flex;
+}
+
+.contact ul li {
+  list-style: none;
+  padding: 2rem;
+}
+
+.contact ul li svg {
+  height: 4rem;
+  width: 4rem;
+}
+
+.contact__text {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.7);
 }
