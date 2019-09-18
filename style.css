@@ -329,3 +329,12 @@ nav ul li a:hover {
   font-weight: 500;
   color: rgba(0, 0, 0, 0.7);
 }
+
+#spp {
+  font-size: 1rem;
+  padding-left: 1rem;
+}
+
+#spp a {
+  font-size: 1rem;
+}
